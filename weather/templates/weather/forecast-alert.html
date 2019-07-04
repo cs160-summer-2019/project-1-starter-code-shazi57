@@ -3,18 +3,105 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Forecast - Alert!</title>
-	
+	<title>Forecast</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/vendors/bootstrap/css/bootstrap.css' %}" />
 	<link rel="stylesheet" type="text/css" href="{% static 'weather/css/style.css' %}" />
-
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Dosis|Stylish&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <style>
+    body {
+      background-image: url("https://images.pexels.com/photos/912364/pexels-photo-912364.jpeg?cs=srgb&dl=blue-sky-bright-clouds-912364.jpg&fm=jpg");
+      background-size : cover;
+      background-attachment : fixed;
+      background-position : center;
+      margin:  0;
+    }
+    div.topbar {
+      margin-top : 10px;
+      margin-left : 10px;
+    }
+    div.topbar input[type = text]{
+      background-color : lightblue;
+      border-color : white;
+      font-family: 'Dosis', sans-serif;
+      opacity : 0.8;
+    }
+    div.topbar button{
+      color : white;
+      margin-left : 5px;
+      background-color : lightblue;
+      border-radius : 10px;
+      opacity : 0.8;
+    }
+    div.topbar p{
+      color : white;
+      margin-right : 10px;
+      font-size : 20px;
+      font-family: 'Dosis', sans-serif;
+      text-shadow: 4px 4px 8px #000000;
+    }
+    div.topbar span{
+      line-height: 2px;
+      font-size : 28px;
+    }
+    div.transbox {
+      background-color: lightblue;
+      opacity : 0.7;
+      margin-top: 150px;
+      width: 430px;
+      height: 270px;
+    }
+    div.transbox i{
+      margin-top: 10px;
+    }
+    div.transbox p1{
+      color: white;
+      font-family: 'Dosis', sans-serif;
+      font-size : 100px;
+      text-shadow: 4px 4px 8px #000000;
+    }
+    #degreestyle {
+      color: white;
+      font-size : 70px;
+      font-family : 'Dosis', sans-serif;      
+    }
+    
+    div.transbox p2{
+      color: white;
+      font-family: 'Dosis', sans-serif;
+      font-size : 50px;
+      font-weight : bold;
+      line-height : 7px;
+      text-shadow: 4px 4px 8px #000000;
+    }
+  </style>
 </head>
+
 <body>
-	<!-- your single-location forecast with alert interface here -->
+  <!-- your single-location forecast interface here -->
+  <div class = "topbar">
+    <div class = "searchbar">
+      <button class="btn"><i class="fa fa-bars"></i></button>
+      <input type = "text" placeholder = "Search any city">
+    </div>
+    <p align = "right">
+      July 3, 2019
+      <span id = "time"><br>3:00 PM</span>
+    </p>
+  </div>
+  <div class = "background">
+    <div class = "transbox">
+      <center><i class="material-icons" style="font-size:48px;color:red">warning</i></center>
+      <p1 id = "forecastinfo">
+        <center>73&#176;<span id= "degreestyle">F</span></center>
+      </p1>
+      <p2 id = "description">
+        <center>Oakland, CA</center>
+      </p2>
+    </div>
+  </div>
 </body>
 </html>
-
-
-
-
-
